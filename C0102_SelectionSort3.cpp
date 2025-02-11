@@ -29,6 +29,21 @@ int main()
 			}
 
 			//TODO: count ++;
+			int min_index;
+			for (int i = 0; i < size - 1; i++)
+			{
+				min_index = i;
+
+				for (int j = i + 1; j < size; j++)
+				{
+					count++;
+
+					if (arr[j] < arr[min_index])
+						min_index = j;
+				}
+
+				swap(arr[i], arr[min_index]);
+			}
 
 			//cout << size << ", " << count << endl;
 			ofile << size << ", " << count << endl;
