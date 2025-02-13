@@ -1,8 +1,5 @@
 ﻿// 문자열 압축(StringCompression)
 
-//  
-// 
-
 #include <iostream>
 #include <cassert>
 
@@ -19,8 +16,6 @@ int main()
 	// - 알파벳은 총 26 글자	
 	// cout << int('a') << " " << int('z') << endl; // 97 122
 
-	// char arr[] = "ababcdfdceeefda";
-	// char arr[] = "a";
 	char arr[] = "czxvopzxczxcababcdfdceeedag";
 	int n = sizeof(arr) - 1; // - 1 마지막 안보이는 '\0' 제외
 
@@ -94,29 +89,44 @@ int main()
 
 	cout << arr << endl;
 
+	// 나의 구현
 	char character = arr[0];
 	int count = 1;
-
-	//cout << character;
-
 	for (int i = 1; i < n; i++)
 	{
 		if (arr[i] == character)
 		{
-			// TODO: ...
 			count++;
 		}
 		else
 		{
-			// TODO: ...
 			cout << character << count;
 			character = arr[i];
 			count = 1;
 		}
 	}
-
 	cout << character;
 	cout << count << endl; // 마지막 count 출력
+
+	// 다른 구현법
+	//char character = arr[0];
+	//int count = 1;
+	//cout << character;
+	//for (int i = 1; i < n; i++)
+	//{
+	//	if (arr[i] == character)
+	//	{
+	//		count++;
+	//	}
+	//	else
+	//	{
+	//		cout << count;
+	//		count = 1;
+	//		character = arr[i];
+	//		cout << character;
+	//	}
+	//}
+	//cout << count << endl; // 마지막 count 출력
 
 	return 0;
 }
@@ -152,5 +162,10 @@ int Count(char* arr, int n, char x)
 
 // 출력 결과
 /*
+czxvopzxczxcababcdfdceeedag
+a3b2c5d3e3f1g1o1p1v1x3z3
+a3b2c5d3e3f1g1o1p1v1x3z3
 
+aaabbcccccdddeeefgopvxxxzzz
+a3b2c5d3e3f1g1o1p1v1x3z3
 */
