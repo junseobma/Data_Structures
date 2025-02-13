@@ -31,7 +31,7 @@ int main()
 	// 풀이 1. 모든 알파벳에 대해서 Count()
 	// 힌트: 소문자 알파벳 'a'~'z'는 int로는 97~122에 대응
 	// 단점: 없는 알파벳도 세야 한다.
-	
+
 	int table[26] = { 0 }; // 표를 사용할 수도 있고 사용하지 않을 수도 있음, 모든 값을 0으로 초기화
 
 	for (int i = 0; i < 26; i++)
@@ -52,7 +52,7 @@ int main()
 
 
 		// 방법2: 표를 만들지 않고 직접 출력하는 방법
-		
+
 		// 나의 구현 1 - Count() 사용전
 		//int count = 0;
 		//for (int j = 0; j < n; j++)
@@ -97,7 +97,7 @@ int main()
 	char character = arr[0];
 	int count = 1;
 
-	cout << character;
+	//cout << character;
 
 	for (int i = 1; i < n; i++)
 	{
@@ -109,10 +109,13 @@ int main()
 		else
 		{
 			// TODO: ...
-
+			cout << character << count;
+			character = arr[i];
+			count = 1;
 		}
 	}
 
+	cout << character;
 	cout << count << endl; // 마지막 count 출력
 
 	return 0;
