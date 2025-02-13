@@ -1,7 +1,7 @@
 ﻿// 순차 탐색(SequentialSearch)
 
 // Count(): 정렬이 안된 상태에서는 한번씩은 다 비교를 해봐야된다. 
-// SortedCount(): 정렬이 되있으면 탐색의 효율을 높일 수 있다. 
+// SortedCount(): 정렬이 돼있으면 탐색의 효율을 높일 수 있다. 
 
 #include <iostream>
 
