@@ -4,6 +4,8 @@
 // 이렇게 하면 함수 호출이 스택에 쌓이면서 메모리를 점점 더 사용
 // 만약 종료 조건이 없거나 잘못 설정되면 무한 재귀 호출이 발생하여 스택 오버플로우(Stack Overflow)가 발생
 
+// 가시화 도구 링크: https://pythontutor.com/cpp.html#mode=edit
+
 #include <iostream>
 
 using namespace std;
