@@ -27,6 +27,10 @@ int RecurSum(int* arr, int n)
 		return arr[n-1] + RecurSum(arr, n - 1);
 	else
 		return 0;
+
+	// 이렇게 줄일수도 있다. n == 0 일 때 false가 된다.
+	//if (n) return arr[n - 1] + RecurSum(arr, n - 1);
+	//return 0;
 }
 
 int main()
